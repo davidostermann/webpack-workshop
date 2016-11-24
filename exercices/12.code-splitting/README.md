@@ -173,6 +173,11 @@ Vous remarquerez que lodash/truncate a été isolé dans vendor.bundle.js
 
 NB : il ne peut y avoir qu'un seul webpack runtime par page ; ici, il est dans vendor.bundle.js
     
+
+## Concept 4 : Mis vendor et common
+
+cf. [example](https://github.com/webpack/webpack/tree/master/examples/common-chunk-and-vendor-chunk)
+ 
 ## Concept 4 : async module avec requireEnsure
 
 Très utile dans les single page avec router

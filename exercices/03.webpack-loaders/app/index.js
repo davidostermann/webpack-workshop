@@ -1,11 +1,8 @@
-var comp1 = require('../component1');
-var comp2 = require('../component2');
+var comp1 = require('./component1');
+var comp2 = require('./component2');
+var styles = require('./index.css');
 
 var app = document.getElementById('app');
-
-var title = document.createElement('h1');
-title.innerHTML = 'PUBLIC';
-app.appendChild(title);
 
 var child1 = document.createElement('div');
 child1.innerHTML = comp1;
