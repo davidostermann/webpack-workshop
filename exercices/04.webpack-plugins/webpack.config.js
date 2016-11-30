@@ -15,7 +15,7 @@ const config = {
   }, 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Exercice 3 - Webpack plugins - title from webpack config',
+      title: 'Exercice 4 - Webpack plugins - title from webpack config',
       hash: true,
       template: path.resolve(__dirname, 'template/index.template.ejs'),
     })

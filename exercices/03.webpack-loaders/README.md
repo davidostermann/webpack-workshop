@@ -94,7 +94,45 @@ Nous allons voir plus tard que nous pouvons aussi traiter les image inline dans 
 
 	$ npm install url-loader file-loader -D
 	
-require("url-loader?limit=10000!./file.png");
+Rajoutons une image dans index.js
+
+	var child3 = document.createElement('img');
+	child3.src = fox;
+	app.appendChild( child3 );
+	
+Build
+	
+	$ webpack
+	
+Dans le fichier build/bundle.js, vous pouvez constatez que l'image a été exporté en base64.
+
+Vous ne voulez peut-être pas que vos images soient toutes exportées en base64.
+
+Pourquoi : // TODO
+
+Rajoutons une image plus grande :
+	
+	var foxBig = require('./img/fox-big.jpg');
+	...
+    var child4 = document.createElement('img');
+    child4.src = foxBig;
+    app.appendChild( child4 );
+
+Rajoutons une limite :
+	...
+        {
+          test: /\.css$/,
+          query: {limit: 50000},
+          loaders: ['style', 'css'],
+          include: PATHS.app
+        },
+     ...
+
+Dans le fichier build/bundle.js, vous pouvez constatez que fox-big est rendu en tant que fichier.
+
+Rajoutons une inmage dans index.css
+
+// TODO
 	
 
 	

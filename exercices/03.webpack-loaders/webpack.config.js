@@ -25,10 +25,10 @@ const config = {
         include: PATHS.app,
         exclude: './node_modules'
       },
-      ,
       {
         test: /\.jpg|png$/,
         loader: 'url' ,
+        query: {limit: 50000},
         include: PATHS.app,
         exclude: './node_modules'
       }
