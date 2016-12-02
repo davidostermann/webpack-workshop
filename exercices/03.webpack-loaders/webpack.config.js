@@ -10,6 +10,7 @@ const config = {
   entry: PATHS.app,
   output: {
     path: PATHS.build,
+    publicPath: '/build/',
     filename: 'bundle.js'
   },
   module: {
